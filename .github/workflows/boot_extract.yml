@@ -41,7 +41,7 @@ jobs:
             
             - name: Dumping boot and init_boot    
               run: | 
-                ./otadump payload.bin --partitions boot,init_boot
+                ./otadump payload.bin --partitions boot,init_boot,recovery
                 cp extracted*/boot.img extracted*/init_boot.img extracted*/recovery.img $GITHUB_WORKSPACE
                 sha1sum boot.img > boot.img.sha1sum
                 sha1sum init_boot.img > init_boot.img.sha1sum
